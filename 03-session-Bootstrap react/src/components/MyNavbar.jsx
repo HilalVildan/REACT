@@ -20,13 +20,13 @@ const MyNavbar = () => {
            
            
             <NavDropdown title="Courses" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">#</NavDropdown.Item>
+              <NavDropdown.Item href="#action3">Full-Stack</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
-                #
+                Data Science#
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action5">
-                #
+                Cyber Security
               </NavDropdown.Item>
             </NavDropdown>
 
