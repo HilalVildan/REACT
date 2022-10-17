@@ -1,0 +1,14 @@
+@import "./scss/button";
+@import "./scss/reset";
+@import "./scss/variable";
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1{
+    color: $red;
+}
+
+h2{
+    color: $orange;
+}

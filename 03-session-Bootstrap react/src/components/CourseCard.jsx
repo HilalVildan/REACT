@@ -12,7 +12,7 @@ const CourseCard = ({ dataa }) => {
       <Row className="d-flex justify-content-center g-3">
         {dataa.map((eleman) => {
           return (
-            <Col sm={12} md={6} lg={4} >
+            <Col sm={12} md={6} lg={4} key={eleman.id} >
               <Card style={{ width: "18rem" }}>
                 <Card.Img variant="top" src={eleman.img} />
                 <Card.Body>

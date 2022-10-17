@@ -1,0 +1,23 @@
+@import "./variable";
+
+
+.btn-container{
+  
+    button{
+        color: white ;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+    }
+
+    &--small{
+        background-color: $lightGreen;
+        padding: 5px;
+
+    }
+
+    &--large{
+        background-color: $darkGreen;
+        padding: 5px;
+    }
+}
