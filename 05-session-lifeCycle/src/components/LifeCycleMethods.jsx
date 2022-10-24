@@ -13,6 +13,10 @@
 //* (Optional) Componentin update edilmesi (componentDidUpdate)
 //* Bileşenin ölümü (DOM ağacından kaldırılıyor)
 
+
+
+
+
  import React from "react";
 
 class LifeCycleMethods extends React.Component {
