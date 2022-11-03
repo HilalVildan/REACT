@@ -1,9 +1,8 @@
 
 
-const EditTutorial = () => {
+const EditTutorial = ({putBilgi, items, setItems}) => {
 
-  
- 
+ const {id, title, description} = items
  
 return (
   <div className="modal" tabIndex="-1" id="edit-modal">
@@ -30,6 +29,8 @@ return (
               className="form-control"
               id="title"
               placeholder="Enter your title"
+              value={title}
+              onChange={(e)=> setItems({...items, title: e.target.value})}
              
              
            required
@@ -44,7 +45,8 @@ return (
               className="form-control"
               id="desc"
               placeholder="Enter your Description"
-             
+             value={description}
+             onChange={(e)=> setItems({...items, description: e.target.value })}
             
               required
             />
@@ -56,7 +58,7 @@ return (
             type="button"
             className="btn btn-primary"
             data-bs-dismiss="modal"
-           
+           onClick={()=>putBilgi({id:id, title:title, description:description})}
           >
             Save
           </button>

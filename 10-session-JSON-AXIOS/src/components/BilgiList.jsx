@@ -1,10 +1,11 @@
 import { FaEdit } from 'react-icons/fa';
 import { AiFillDelete } from 'react-icons/ai';
 import EditBilgi from './EditBilgi';
+import { useState } from 'react';
 
-const BilgiList = () => {
+const BilgiList = ({bilgiler, deleteBilgi, putBilgi}) => {
 
-
+const [items, setItems] = useState("")
   return (
     <div className="container mt-4">
       <table className="table table-striped">
@@ -20,32 +21,39 @@ const BilgiList = () => {
         </thead>
         <tbody>
           
-           
-              <tr >
-                <th></th>
-                <td></td>
-                <td></td>
+        {bilgiler.map((eleman)=>{
+          const {id, title, description} = eleman;
+          return (
+            <tr key={id}>
+                <th>{id} </th>
+                <td>{title} </td>
+                <td>{description} </td>
                 <td className="text-center text-nowrap">
                   <FaEdit
                     data-bs-toggle="modal"
                     data-bs-target="#edit-modal"
                     size={20}
                     className="me-2 text-warning cursor-pointer"
+                    onClick={()=> setItems(eleman)}
                     
                   />
                   <AiFillDelete
                     size={22}
                     className="text-danger cursor-pointer"
+                    onClick={()=>deleteBilgi(id)}
                   
                   />
                 </td>
               </tr>
            
+          )
+        })}   
+              
         
         </tbody>
       </table>
 
-      <EditBilgi />
+      <EditBilgi putBilgi={putBilgi} items={items} setItems={setItems}/>
     </div>
   );
 };
