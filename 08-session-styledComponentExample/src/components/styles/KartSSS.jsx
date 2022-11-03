@@ -10,8 +10,11 @@ const KartSSS = styled.div`
   padding: 60px;
 
   display: flex;
-  flex-direction: ${({ters})=> ters || "row"}
-  
+  flex-direction: ${({ ters }) => ters || "row"};
+
+  @media (max-width: ${({theme}) => theme.responsive}) {
+    flex-direction: column;
+  }
 `;
 
 export default KartSSS;
