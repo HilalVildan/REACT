@@ -1,8 +1,17 @@
 import React from 'react'
+import { Button, Cards, RecipeHeader, RecipeImage } from './HomeStyles';
 
-const RecipeCard = () => {
+const RecipeCard = ({i}) => {
+  console.log(i);
   return (
-    <div>RecipeCard</div>
+    <Cards>
+    <RecipeHeader>
+{i.label}
+    </RecipeHeader>
+    <RecipeImage src={i.image}/>
+    <Button>Details</Button>
+
+    </Cards>
   )
 }
 
