@@ -7,11 +7,12 @@ const AddBilgi = ({postBilgi}) => {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
 
- const submit=(e)=>{
-   e.preventDefault()
-postBilgi({title: title, description:desc})
- }
- 
+  //! post işlemi babadan buraya her özelliği ile geldi, form yapısıyla ekranda verileri girdik, submit butonuna tıklayınca form onSubmit oldu ve onSubmit olunca, buraya babadan gelen post işlemi çalıştı
+
+  const submit = (e) => {
+    e.preventDefault();
+    postBilgi({ title: title, description: desc });
+  };
 
   return (
     <div className="container text-center mt-4">
