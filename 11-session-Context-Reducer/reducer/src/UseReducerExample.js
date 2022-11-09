@@ -25,7 +25,7 @@ const UseReducerExample = () => {
   
   const fetchDog = () => {
     dispatch1({ type: "START" });
-    fetch("https://do.ceo/api/breeds/image/random")
+    fetch("https://dog.ceo/api/breeds/image/random")
       .then((res) => res.json())
       .then((data) => {
         dispatch1({ type: "SUCCESS", payload: data.message });

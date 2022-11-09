@@ -3,7 +3,7 @@ import OgrenciList from "./OgrenciList"
 const Home = () => {
   return (
     <div>
-      <h1>ÖĞRENCİ LİSTESİ</h1>
+      <h1>ÖĞRENCİ LİSTESI</h1>
       <OgrenciList />
     </div>
   );
