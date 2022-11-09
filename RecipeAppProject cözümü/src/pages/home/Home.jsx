@@ -5,6 +5,8 @@ import homeSvg from "../../assets/home.svg";
 import { useState } from "react";
 import Header from "../../components/header/Header";
 import RecipeCard from "./RecipeCard"
+import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../components/footer/Footer";
 
 const APP_ID = "4e9f05eb";
 
@@ -28,21 +30,22 @@ const Home = () => {
 
   return (
     <div>
+      <Navbar />
       <Header setOgün={setOgün} setQuery={setQuery} getData={getData} />
 
       {yemekler ? (
         <MainContainer>
-        {yemekler.map((i, index)=>(
-          <RecipeCard key={index} i={i.recipe}/>
-        ))}
-
-</MainContainer>
-
+          {yemekler.map((i, index) => (
+            <RecipeCard key={index} i={i.recipe} />
+          ))}
+        </MainContainer>
       ) : (
         <ImgDiv>
           <HomeImg src={homeSvg} />
         </ImgDiv>
       )}
+
+      <Footer />
     </div>
   );
 };

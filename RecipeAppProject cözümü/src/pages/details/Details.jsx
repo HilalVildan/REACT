@@ -13,8 +13,9 @@ const Details = () => {
   
 const location = useLocation();
 //! useLocation= useNavigate in kardeşidir, navigate in state ine yüklenen veriyi navigate in yönlendirdiği sayfada karşılar
-// navigate("/details", { state: { recipe1 } });
-const recipe= location.state.recipe1
+//! useParam parcalari karsilamak icin kullanilir. mesela id gönderildiginde.
+// navigate("/details", { state: { i } });
+const recipe= location.state.i
 
 console.log(recipe);
   return (
