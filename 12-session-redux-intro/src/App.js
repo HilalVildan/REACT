@@ -4,7 +4,8 @@ import Todo from "./components/todo/Todo";
 import { combineReducers, legacy_createStore } from "redux"
 import counterReducer from "./redux/reducers/counterReducer"
 import todoReducer from "./redux/reducers/todoReducer"
-import { Provider } from "react-redux"
+import { Provider } from "react-redux";
+
 
 //legacy_createStore eski adi createStore
 

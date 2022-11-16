@@ -1,12 +1,18 @@
-import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { ekle } from "../../redux/actions/todoActions";
+
 
 
 const TodoInput = () => {
-  const [text, setText] = useState("");
+
+  const dispatch = useDispatch();
+  const görevler = useSelector((state)=> state.todoReducer.görevler)
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    //!ekle fonksiyonu
+   dispatch(ekle(görevler.text)) 
+    
   };
   return (
     <form onSubmit={handleSubmit}>
@@ -14,8 +20,9 @@ const TodoInput = () => {
         className="todo-input"
         type="text"
         placeholder="Add Todo"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
+
+       value={görevler.text}
+        onChange={(e) => görevler.text = e.target.value}
       />
       <button type="submit" className="add-button">
         Add

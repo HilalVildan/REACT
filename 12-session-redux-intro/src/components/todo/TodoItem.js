@@ -2,7 +2,7 @@ import React from 'react';
 import okLogo from '../../assets/ok.png';
 import deleteLogo from '../../assets/delete.png';
 
-const TodoItem = () => {
+const TodoItem = ({görev}) => {
 
 
   return (
@@ -11,7 +11,7 @@ const TodoItem = () => {
       className="todo-list"
     >
       <h2 className="todoText">
-        
+        {görev.text}
       </h2>
       <div>
         <span>
