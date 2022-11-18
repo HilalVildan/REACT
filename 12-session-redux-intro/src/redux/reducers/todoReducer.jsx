@@ -1,6 +1,11 @@
+const initial = { görevler: [{ id: 0, text: "Work on Redux" }] };
+
+
+
+
+
 const todoReducer = (
-  state = { görevler: [{ id: 0, text: "Work on Redux" }] },
-  action
+  state = initial,action
 ) => {
   switch (action.type) {
     case "EKLE":
@@ -12,9 +17,8 @@ const todoReducer = (
       };
 
     case "SIL":
-      return {
-        görevler: [{ id: 0, text: "Work on Redux" }],
-      };
+      return initial
+      ;
 
     default:
       return state;
