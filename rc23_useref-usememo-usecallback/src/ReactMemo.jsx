@@ -4,13 +4,15 @@ import fullStack from './assets/fs.png';
 
 const ReactMemo = () => {
  
+  const [sayac, setSayac] = useState(0);
+  const [resim, setResim] = useState();
  
   return (
     <div>
-      <Header  />
-      <p>Count: {}</p>
-      <button >Increase</button>
-      <button >FullStack</button>
+      <Header  resim={resim}/>
+      <p>Count: {sayac}</p>
+      <button onClick={()=>setSayac(sayac+1)} >Increase</button>
+      <button onClick={()=> setResim(fullStack)} >FullStack</button>
     </div>
   );
 };

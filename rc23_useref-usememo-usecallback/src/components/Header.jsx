@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { memo } from 'react';
 import clarusLogo from '../assets/cw_logo.png';
 
 
 
-const Header = () => {
+const Header = ({resim}) => {
   console.log('HEADER COMPONENT RENDERED');
   return (
     <div className="header">
       <img
-        src=""
+        src={resim?resim:clarusLogo}
         alt="cw_logo"
         style={{ margin: '1rem', maxHeight: '200px' }}
       />
@@ -16,5 +16,5 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default memo(Header);
 

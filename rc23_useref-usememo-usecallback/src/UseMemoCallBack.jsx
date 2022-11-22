@@ -9,7 +9,7 @@ import React, {
 import Users from './components/Users';
 
 const UseMemoCallBack = () => {
-  const [users, setUsers] = useState([]);
+  const [kullanici, setUsers] = useState([]);
   const [text, setText] = useState("");
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const UseMemoCallBack = () => {
   }, []);
   //   console.log(users);
   
- 
+ const filtreli = kullanici.filter((i)=>i.name.toLowerCase().includes(text.toLowerCase()))
   
 
 
@@ -27,11 +27,12 @@ const UseMemoCallBack = () => {
     <div>
       <input type="search" onChange={(e) => setText(e.target.value)} />
      
-      <button>Search User</button>
+      <button  >Search User</button>
       <button id="add-button" >
         Add User
       </button>
-      <Users users={users}/>
+      {/* <Users kullanici={kullanici}/> */}
+      <Users kullanici={filtreli} />
     </div>
   );
 };
